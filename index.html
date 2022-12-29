@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" defer src="scripts/index.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles/style.css">
   <title>Frontend Mentor | In-browser markdown editor</title>
 </head>
 <body>
-  <!-- Sidebar start -->
+  <header class="top_panel">
+    <div class="burger">
+      <img src="assets/icon-menu.svg" alt="menu">
+    </div>
+    <div class="control_panel">
+      <div class="file_name">
+        <img src="assets/icon-document.svg" alt="document">
+        <span class="name">welcome.md</span>
+      </div>
+      <div class="actions">
+        <div class="delete">
+          <img src="assets/icon-delete.svg" alt="delete">
+        </div>
+        <div class="save">
+          <img src="assets/icon-save.svg" alt="save">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main data-mode="HTML">
+    <div class="preview_heading">
+      <h2>preview</h2>
+      <div class="visible_status">
+        <img src="assets/icon-hide-preview.svg">
+      </div>
+    </div>
+    <div class="workplace">
+      <div class="content" id="content">
 
-  My Documents
-
-  New Document
-
-  <!-- Sidebar end -->
-
-  <!-- Header start -->
-
-  Document Name
-
-  Save Changes
-
-  <!-- Header end -->
-
-  <!-- Main start -->
-
-  Markdown
-
-  Preview
-
-  <!-- Main end -->
+      </div>
+    </div>
+  </main>
 </body>
 </html>

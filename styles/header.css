@@ -1,0 +1,44 @@
+.top_panel {
+  display: flex;
+}
+
+.burger {
+  padding: 21px 16px;
+  background-color: #35393F;
+}
+
+.control_panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2B2D31;
+  flex-basis: 100%;
+  padding-right: 8px;
+  padding-left: 24px;
+}
+
+.file_name {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: white;
+}
+
+.file_name > img {
+  width: 13px;
+  height: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.save {
+  padding: 12px;
+  background-color: var(--color-accent);
+  border-radius: var(--interface-border-radius);
+}

@@ -1,0 +1,94 @@
+.preview_heading {
+  padding: 12px 16px 14px 16px;
+  background-color: #F5F5F5;
+}
+
+.preview_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-preview-text)
+}
+
+.preview_heading h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.content {
+  padding: 16px 20px 54px 20px;
+}
+
+[data-mode="HTML"] #content {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  font-family: 'Roboto Slab', serif;
+}
+
+[data-mode="HTML"] #content p,
+[data-mode="HTML"] #content li {
+  color: var(--color-preview-text);
+}
+
+[data-mode="HTML"] #content blockquote,
+[data-mode="HTML"] #content pre {
+  background-color: #F5F5F5;
+  padding: 24px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+[data-mode="HTML"] #content blockquote {
+  border-left: 4px solid var(--color-accent);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+[data-mode="HTML"] #content blockquote p,
+[data-mode="HTML"] #content code {
+  color: var(--color-markdown-text);
+}
+
+[data-mode="HTML"] #content pre code {
+  font-family:'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  white-space: normal;
+}
+
+[data-mode="HTML"] #content li {
+  margin-bottom: 4px;
+}
+
+[data-mode="HTML"] #content ul li::marker {
+  color: var(--color-accent);
+}
+
+[data-mode="HTML"] #content h1 {
+  font-size: 2rem;
+}
+
+[data-mode="HTML"] #content h2 {
+  font-size: 1.75rem;
+  font-weight: lighter;
+}
+
+[data-mode="HTML"] #content h3 {
+  font-size: 1.5rem;
+}
+
+[data-mode="HTML"] #content h4 {
+  font-size: 1.3rem;
+}
+
+[data-mode="HTML"] #content h5 {
+  font-size: 1rem;
+}
+
+[data-mode="HTML"] #content h6 {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
