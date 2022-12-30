@@ -11,3 +11,12 @@ body {
 a {
   color: inherit;
 }
+
+textarea {
+  resize: none;
+}
+
+button {
+  border: none;
+  color: white;
+}

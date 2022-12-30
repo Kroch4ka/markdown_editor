@@ -15,30 +15,49 @@
       <img src="assets/icon-menu.svg" alt="menu">
     </div>
     <div class="control_panel">
-      <div class="file_name">
-        <img src="assets/icon-document.svg" alt="document">
-        <span class="name">welcome.md</span>
+      <div class="info">
+        <h1>
+          markdown
+        </h1>
+        <div class="file_name">
+          <img src="assets/icon-document.svg" alt="document">
+          <span class="name">welcome.md</span>
+        </div>
       </div>
       <div class="actions">
         <div class="delete">
           <img src="assets/icon-delete.svg" alt="delete">
         </div>
-        <div class="save">
+        <button class="save">
           <img src="assets/icon-save.svg" alt="save">
+          <span class="save_content">Save changes</span>
         </div>
       </div>
     </div>
   </header>
-  <main data-mode="HTML">
-    <div class="preview_heading">
-      <h2>preview</h2>
-      <div class="visible_status">
-        <img src="assets/icon-hide-preview.svg">
+  <main>
+    <div class="workplace" data-mode="EDITOR">
+      <div class="editor">
+        <div class="preview_heading">
+          <h2>markdown</h2>
+          <div class="visible_status">
+            <img class="show_preview_img" src="assets/icon-show-preview.svg">
+            <img class="hide_preview_img" src="assets/icon-hide-preview.svg">
+          </div>
+        </div>
+        <textarea class="markdown_editor"></textarea>
       </div>
-    </div>
-    <div class="workplace">
-      <div class="content" id="content">
+      <div class="preview">
+        <div class="preview_heading">
+          <h2>preview</h2>
+          <div class="visible_status">
+            <img class="show_preview_img" src="assets/icon-show-preview.svg">
+            <img class="hide_preview_img" src="assets/icon-hide-preview.svg">
+          </div>
+        </div>
+        <div class="preview_content">
 
+        </div>
       </div>
     </div>
   </main>
