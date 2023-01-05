@@ -8,7 +8,10 @@ const createDocumentBtnNode = document.querySelector('[data-document-new]');
 const documentCreatePresenter = {
     bindHandlers: (state) => {
         createDocumentBtnNode.addEventListener('click', () => {
-            documentHelpers.saveCurrentDocument(state);
+            if (!documentHelpers.isSavedCurrentDocument(state)) {
+                documentHelpers.saveCurrentDocument(state);
+            }
+
             state.currentDocument = documentHelpers.createDefaultDocument();
 
             documentNameEditorView.render(state);

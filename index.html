@@ -35,7 +35,9 @@
   <main>
     <header class="top_panel">
       <div class="burger" data-sidebar-opener>
-        <img src="assets/icon-menu.svg" alt="menu">
+        <div class="burger_inner">
+          <div class="burger_middle"></div>
+        </div>
       </div>
       <div class="control_panel">
         <div class="info">
@@ -45,14 +47,14 @@
           <div class="document_name">
             <img src="assets/icon-document.svg" alt="document">
             <div class="document_name__info">
-              <span class="name_title"></span>
+              <span class="name_title">document name</span>
               <span class="name" data-document-name></span>
-              <input class="name_input" type="text" data-edit-document-name>
+              <input class="name_input hide" type="text" data-edit-document-name>
             </div>
           </div>
         </div>
         <div class="actions">
-          <div class="delete" data-modal-delete>
+          <div class="delete hide" data-modal-delete>
             <img src="assets/icon-delete.svg" alt="delete">
           </div>
           <button class="save btn" data-document-save>

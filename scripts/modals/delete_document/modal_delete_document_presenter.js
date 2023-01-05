@@ -13,7 +13,7 @@ const modalDeleteDocumentPresenter = {
             state.documents = state.documents.filter(document => document.id !== state.currentDocument.id);
             state.currentDocument = documentHelpers.createDefaultDocument();
 
-            state.uiState.modal.state = modalStates.CLOSE;
+            state.uiState.modal = modalStates.CLOSE;
 
             modalTemplateView.render(state);
             workplaceView.render(state);

@@ -13,10 +13,10 @@ const workplacePresenter = {
     });
 
     visibleModeNode.addEventListener('click', () => {
-      if (state.uiState.workplace.state === workplaceStates.EDITOR) {
-        state.uiState.workplace.state = workplaceStates.PREVIEW;
-      } else if (state.uiState.workplace.state === workplaceStates.PREVIEW) {
-        state.uiState.workplace.state = workplaceStates.EDITOR;
+      if (state.uiState.workplace === workplaceStates.EDITOR) {
+        state.uiState.workplace = workplaceStates.PREVIEW;
+      } else if (state.uiState.workplace === workplaceStates.PREVIEW) {
+        state.uiState.workplace = workplaceStates.EDITOR;
       }
       workplaceView.render(state);
     });

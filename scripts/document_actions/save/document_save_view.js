@@ -6,12 +6,13 @@ const documentSaveView = {
   render: function(state) {
     documentListNode.innerHTML = '';
     state.documents.forEach(document => {
-      documentListNode.appendChild(this.createDocumentItem(document.name));
+      documentListNode.appendChild(this.createDocumentItem(document.name, document.id));
     });
   },
-  createDocumentItem: function(name) {
+  createDocumentItem: function(name, id) {
     const itemWrapper = document.createElement('div');
     itemWrapper.classList.add('document_item');
+    itemWrapper.setAttribute('data-document-id', id);
     const documentImg = document.createElement('img');
     documentImg.src = 'assets/icon-document.svg';
     const itemInfoWrapper = document.createElement('div');

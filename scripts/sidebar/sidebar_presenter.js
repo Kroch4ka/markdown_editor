@@ -6,10 +6,10 @@ const sidebarOpenerNode = document.querySelector('[data-sidebar-opener]');
 const sidebarPresenter = {
   bindHandlers: (state) => {
     sidebarOpenerNode.addEventListener('click', () => {
-      if (state.uiState.sidebar.state === sidebarStates.CLOSE) {
-        state.uiState.sidebar.state = sidebarStates.OPEN;
-      } else if (state.uiState.sidebar.state === sidebarStates.OPEN) {
-        state.uiState.sidebar.state = sidebarStates.CLOSE;
+      if (state.uiState.sidebar === sidebarStates.CLOSE) {
+        state.uiState.sidebar = sidebarStates.OPEN;
+      } else if (state.uiState.sidebar === sidebarStates.OPEN) {
+        state.uiState.sidebar = sidebarStates.CLOSE;
       }
       sidebarView.render(state);
     });

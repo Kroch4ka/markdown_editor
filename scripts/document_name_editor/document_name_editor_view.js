@@ -6,13 +6,13 @@ const documentNameEditorInput = document.querySelector("[data-edit-document-name
 const documentNameEditorView = {
   render: (state) => {
     if (
-      state.uiState.documentNameEditor.state === documentNameEditorStates.IDLE
+      state.uiState.documentNameEditor === documentNameEditorStates.IDLE
     ) {
       documentNameNode.style.display = "block";
       documentNameEditorInput.style.display = "none";
       documentNameNode.textContent = state.currentDocument.name;
     } else if (
-      state.uiState.documentNameEditor.state ===
+      state.uiState.documentNameEditor ===
       documentNameEditorStates.EDITING
     ) {
       documentNameNode.style.display = "none";

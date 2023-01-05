@@ -92,6 +92,10 @@
   transition-duration: 0.5s;
 }
 
+body.dark .switcher {
+  transform: translateX(200%);
+}
+
 body .light_theme,
 body.dark .dark_theme  {
   fill: white;

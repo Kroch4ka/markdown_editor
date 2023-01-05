@@ -18,6 +18,11 @@ const workplaceStates = {
   PREVIEW: Symbol("PREVIEW"),
 };
 
+const themeSwitcherStates = {
+  DARK: Symbol("DARK"),
+  LIGHT: Symbol("LIGHT")
+};
+
 const modalDefaultData = {
   DELETE_DOCUMENT_MODAL: {
     TITLE: 'Delete this document?',
@@ -28,10 +33,11 @@ const modalDefaultData = {
 }
 
 const defaultDocumentData = {
-  ID: Date.now(),
+  ID: () => Date.now(),
   NAME: 'untitled.md',
   MARKDOWN: '',
   HTML: '',
 }
 
-export { documentNameEditorStates, sidebarStates, modalStates, workplaceStates, modalDefaultData, defaultDocumentData };
+export { documentNameEditorStates, sidebarStates, modalStates,
+  workplaceStates, modalDefaultData, defaultDocumentData, themeSwitcherStates };

@@ -6,7 +6,7 @@ const modalTemplatePresenter = {
     document.addEventListener('click', (e) => {
       const hasModalParent = !!e.target.closest('.modal_wrapper');
       if (!hasModalParent) {
-        state.uiState.modal.state = modalStates.CLOSE;
+        state.uiState.modal = modalStates.CLOSE;
         modalTemplateView.render(state);
       }
     });

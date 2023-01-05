@@ -1,5 +1,11 @@
-import { documentNameEditorStates, sidebarStates, modalStates, workplaceStates } from "./constants.js";
-import { defaultDocumentData } from "./constants.js";
+import {
+  documentNameEditorStates,
+  sidebarStates,
+  modalStates,
+  workplaceStates,
+  themeSwitcherStates
+} from "./constants.js";
+import documentHelpers from "./helpers/document_helpers.js"
 import documentNameEditorPresenter from "./document_name_editor/document_name_editor_presenter.js";
 import documentNameEditorView from "./document_name_editor/document_name_editor_view.js";
 import workplacePresenter from "./workplace/workplace_presenter.js";
@@ -12,29 +18,20 @@ import documentDeleteView from "./document_actions/delete/document_delete_view.j
 import modalTemplatePresenter from "./modals/modal_template_presenter.js";
 import documentDeletePresenter from "./document_actions/delete/document_delete_presenter.js";
 import documentCreatePresenter from "./document_actions/create/document_create_presenter.js";
+import documentChoosePresenter from "./document_actions/choose/document_choose_presenter.js";
+import themeSwitcherPresenter from "./theme_switcher/theme_switcher_presenter.js";
+import themeSwitcherView from "./theme_switcher/theme_switcher_view.js";
 
 (() => {
   const state = {
-    currentDocument: {
-      id: defaultDocumentData.ID,
-      name: defaultDocumentData.NAME,
-      markdown: defaultDocumentData.MARKDOWN,
-      html: defaultDocumentData.HTML,
-    },
+    currentDocument: documentHelpers.createDefaultDocument(),
     documents: [],
     uiState: {
-      documentNameEditor: {
-        state: documentNameEditorStates.IDLE,
-      },
-      sidebar: {
-        state: sidebarStates.CLOSE
-      },
-      modal: {
-        state: modalStates.CLOSE
-      },
-      workplace: {
-        state: workplaceStates.EDITOR
-      }
+      documentNameEditor: documentNameEditorStates.IDLE,
+      sidebar: sidebarStates.CLOSE,
+      modal: modalStates.CLOSE,
+      workplace: workplaceStates.EDITOR,
+      theme: themeSwitcherStates.LIGHT
     },
   };
 
@@ -46,9 +43,12 @@ import documentCreatePresenter from "./document_actions/create/document_create_p
   modalTemplatePresenter.bindHandlers(state);
   documentDeletePresenter.bindHandlers(state);
   documentCreatePresenter.bindHandlers(state);
+  documentChoosePresenter.bindHandlers(state);
+  themeSwitcherPresenter.bindHandlers(state);
 
   documentDeleteView.render(state);
   documentSaveView.render(state);
   workplaceView.render(state);
   sidebarView.render(state);
+  themeSwitcherView.render(state);
 })();

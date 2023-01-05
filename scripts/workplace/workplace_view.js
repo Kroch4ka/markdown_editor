@@ -8,7 +8,7 @@ const workplaceView = {
   render: (state) => {
     markdownEditorNode.value = state.currentDocument.markdown;
     htmlPreviewNode.innerHTML = state.currentDocument.html;
-    workplaceNode.dataset.mode = state.uiState.workplace.state.description;
+    workplaceNode.dataset.mode = state.uiState.workplace.description;
   }
 }
 
