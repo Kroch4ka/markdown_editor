@@ -3,9 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
 @import url(header.css);
 @import url(main.css);
+@import url(sidebar.css);
+@import url(modal.css);
 
 body {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  overflow: hidden;
+}
+
+* {
+  user-select: none;
 }
 
 a {
@@ -19,4 +27,23 @@ textarea {
 button {
   border: none;
   color: white;
+}
+
+.title {
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.btn {
+  padding: 12px;
+  background-color: var(--color-accent);
+  border-radius: var(--interface-border-radius);
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }

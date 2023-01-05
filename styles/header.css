@@ -6,6 +6,8 @@
 .burger {
   padding: 21px 16px;
   background-color: #35393F;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .control_panel {
@@ -18,23 +20,24 @@
   padding-right: 8px;
 }
 
+.control_panel > * {
+  flex-shrink: 0;
+}
+
 .control_panel .info {
   display: flex;
   align-content: center;
 }
 
-.control_panel .info h1 {
+.control_panel .info > .title {
   display: none;
-  font-size: 0.9rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
   align-self: end;
   padding-right: 15px;
   border-right: 1px solid #979797;
   padding-left: 24px;
 }
 
-.file_name {
+.document_name {
   display: flex;
   gap: 16px;
   align-items: center;
@@ -55,9 +58,6 @@
 
 .save {
   display: flex;
-  padding: 12px;
-  background-color: var(--color-accent);
-  border-radius: var(--interface-border-radius);
   gap: 7px;
   align-items: center;
 }
@@ -66,14 +66,41 @@
   display: none;
 }
 
+.top_panel .name_input {
+  background: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.top_panel .name_input:focus-visible {
+  outline: none;
+}
+
+.document_name__info {
+  display: flex;
+  flex-flow: column;
+}
+
+.document_name .name_title {
+  display: none;
+  text-transform: capitalize;
+  color: var(--color-preview-text);
+  font-size: 0.9rem;
+}
+
 @media screen and (min-width: 767px) {
   .save_content {
+    display: inline;
+  }
+
+  .document_name .name_title {
     display: inline;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .control_panel .info h1 {
+  .control_panel .info > .title {
     display: block;
   }
 }
