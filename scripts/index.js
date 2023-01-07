@@ -10,7 +10,6 @@ import {
 import localStoragePersist from "./persistance/local_storage.js";
 import savedBtnView from "./components/saved_btn/view.js";
 import saveBtnPresenter from "./components/saved_btn/presenter.js";
-import onChange from "on-change";
 
 (() => {
   const state = {
@@ -26,8 +25,5 @@ import onChange from "on-change";
     },
   };
 
-  const store = onChange(state);
-
-  console.log(store);
-  // END
+  console.log(XState);
 })();
