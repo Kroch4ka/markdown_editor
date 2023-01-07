@@ -58,6 +58,15 @@
 
 .document_item__title {
   color: white;
+  cursor: pointer;
+}
+
+.document_item__title:hover {
+  color: var(--color-accent);
+}
+
+.chosen {
+  color: var(--color-accent);
 }
 
 .theme_switcher {
@@ -91,6 +100,8 @@
   transition-property: transform;
   transition-duration: 0.5s;
 }
+
+
 
 body.dark .switcher {
   transform: translateX(200%);

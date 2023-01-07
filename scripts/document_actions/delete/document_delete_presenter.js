@@ -9,6 +9,7 @@ const documentDeletePresenter = {
     deleteDocumentBtnNode.addEventListener('click', (e) => {
       e.stopImmediatePropagation();
       state.uiState.modal = modalStates.OPEN;
+
       modalDeleteDocumentView.render(state);
       modalDeleteDocumentPresenter.bindHandlers(state);
     });

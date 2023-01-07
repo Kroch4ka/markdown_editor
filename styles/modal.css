@@ -28,7 +28,21 @@
   flex-flow: column;
   width: 100%;
   min-height: 218px;
-  background-color: white;
   padding: 24px;
   max-width: 343px;
+  background: var(--color-light-theme-modal-background);
+  border-radius: var(--interface-border-radius);
+  font-family: 'Roboto Slab', serif;
+}
+
+body.dark .modal_wrapper {
+  background: var(--color-dark-theme-modal-background);
+}
+
+.modal_description {
+  color: var(--color-light-theme-regular-text);
+}
+
+body.dark .modal_description {
+  color: var(--color-dark-theme-regular-text);
 }

@@ -34,7 +34,7 @@
   </aside>
   <main>
     <header class="top_panel">
-      <div class="burger" data-sidebar-opener>
+      <div class="burger">
         <div class="burger_inner">
           <div class="burger_middle"></div>
         </div>
@@ -58,16 +58,18 @@
             <img src="assets/icon-delete.svg" alt="delete">
           </div>
           <button class="save btn" data-document-save>
-            <img src="assets/icon-save.svg" alt="save">
+            <img class="hide icon-save" src="assets/icon-save.svg" alt="save">
+            <img class="hide icon-done" src="assets/icon-done.svg" alt="done">
             <span class="save_content">Save changes</span>
+          </button>
           </div>
         </div>
       </div>
     </header>
     <div class="workplace" data-mode="EDITOR">
       <div class="editor">
-        <div class="preview_heading">
-          <h2>markdown</h2>
+        <div class="preview_panel">
+          <span class="preview_panel__title">markdown</span>
           <div class="visible_status">
             <img class="show_preview_img" src="assets/icon-show-preview.svg">
             <img class="hide_preview_img" src="assets/icon-hide-preview.svg">
@@ -76,8 +78,8 @@
         <textarea class="markdown_editor" data-document-markdown></textarea>
       </div>
       <div class="preview">
-        <div class="preview_heading">
-          <h2>preview</h2>
+        <div class="preview_panel">
+          <span class="preview_panel__title">preview</span>
           <div class="visible_status" data-document-workplace-changer>
             <img class="show_preview_img" src="assets/icon-show-preview.svg">
             <img class="hide_preview_img" src="assets/icon-hide-preview.svg">

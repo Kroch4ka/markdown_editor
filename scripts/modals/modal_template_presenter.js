@@ -1,5 +1,6 @@
 import { modalStates } from "../constants.js";
 import modalTemplateView from "./modal_template_view.js";
+import documentDeleteView from "../document_actions/delete/document_delete_view.js";
 
 const modalTemplatePresenter = {
   bindHandlers: (state) => {
@@ -8,6 +9,7 @@ const modalTemplatePresenter = {
       if (!hasModalParent) {
         state.uiState.modal = modalStates.CLOSE;
         modalTemplateView.render(state);
+        documentDeleteView.render(state);
       }
     });
   }

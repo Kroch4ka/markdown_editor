@@ -1,6 +1,7 @@
 .top_panel {
   display: flex;
   color: white;
+  overflow: hidden;
 }
 
 .burger {
@@ -13,10 +14,10 @@
 .burger_inner {
   display: flex;
   flex-flow: column;
-  gap: 4px;
+  gap: 7px;
   width: 18px;
   height: 18px;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -54,6 +55,7 @@
 
 .burger.opened .burger_inner {
   overflow: visible;
+  justify-content: space-between;
 }
 
 .burger.opened .burger_middle {
@@ -116,6 +118,11 @@
   display: flex;
   gap: 7px;
   align-items: center;
+  transition : opacity 300ms linear;
+}
+
+.save:disabled {
+  opacity: 0.5;
 }
 
 .save_content {
@@ -141,7 +148,7 @@
 .document_name .name_title {
   display: none;
   text-transform: capitalize;
-  color: var(--color-preview-text);
+  color: var(--color-light-theme-preview-text);
   font-size: 0.9rem;
 }
 

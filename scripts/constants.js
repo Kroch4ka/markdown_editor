@@ -1,3 +1,8 @@
+const saveBtnStates = {
+  IDLE: Symbol("IDLE"),
+  CLICKED: Symbol("CLICKED")
+}
+
 const documentNameEditorStates = {
   IDLE: Symbol("IDLE"),
   EDITING: Symbol("EDITING"),
@@ -40,4 +45,4 @@ const defaultDocumentData = {
 }
 
 export { documentNameEditorStates, sidebarStates, modalStates,
-  workplaceStates, modalDefaultData, defaultDocumentData, themeSwitcherStates };
+  workplaceStates, modalDefaultData, defaultDocumentData, themeSwitcherStates, saveBtnStates };

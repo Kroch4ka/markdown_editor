@@ -1,7 +1,7 @@
 import { sidebarStates } from '../constants.js'
 
 const sidebarNode = document.querySelector('.sidebar');
-const burgerMenuNode = document.querySelector('[data-sidebar-opener]');
+const burgerMenuNode = document.querySelector('.burger');
 
 const sidebarView = {
   render: (state) => {

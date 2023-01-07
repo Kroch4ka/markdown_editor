@@ -4,7 +4,7 @@ const deleteBtnNode = document.querySelector('[data-modal-delete]');
 
 const documentDeleteView = {
   render: (state) => {
-    if (!documentHelpers.getDocumentByID(state.currentDocument.id, state)) {
+    if (!documentHelpers.isSavedCurrentDocument(state)) {
       deleteBtnNode.style.display = 'none';
     } else {
       deleteBtnNode.style.display = 'block';
